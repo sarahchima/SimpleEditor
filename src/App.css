@@ -1,0 +1,386 @@
+.App {
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto';
+  color: #404040;
+  background-color: #f1f1f1;
+  --primary-pink: #C954B4;
+  --secondary-pink: #FAEFF8;
+  --default-blue: #2B59C4;
+  --primary-dark: #1E1A38;
+  --secondary-dark: #0F0D1C;
+  --primary-purple: #660066;
+  --secondary-purple: #FFEBFF;
+  --primary-yellow: #907514;
+  --secondary-yellow: #FFF9EB;
+}
+
+.header {
+  height: 55px;
+  display: flex;
+  background-color: #2B59C4;
+  padding-left: 100px;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 4;
+}
+
+.header-title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.DraftEditor-root{
+  position:relative;
+  z-index: 1;
+  height: 60vh !important;
+  margin-bottom: 20px;
+
+}
+
+.DraftEditor-editorContainer {
+  font-size: 18px;
+}
+
+.public-DraftEditorPlaceholder-inner {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+
+.react-datepicker__input-container > input {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  width: 100%;
+  height: 36px;
+  padding: 0 8px;
+  font-size: 16px;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.Dropdown-option.is-selected {
+  background-color: #ABBFED !important; 
+  color: #404040;
+}
+
+.side-menu {
+    background-color: #ffffff;
+    box-shadow: 0 0 0 1px #d9d9d9;
+    padding: 20px;
+    right: 0;
+    padding: 20px;
+    background-color: #FAFAFA
+}
+
+.editor-body {
+    display: grid;
+    justify-content: 'center';
+    display: grid;
+  
+    grid-template-areas:
+      "header header"
+      "content side";  
+    grid-template-columns: 1fr 350px;
+    grid-template-rows: 56px 1fr;
+    height: 100vh;
+}
+
+.editor-container {
+  border-radius: 5px;
+  margin-right: 5%;
+  padding: 50px 100px;
+}
+
+.date-container {
+  margin-bottom: 20px;
+}
+
+header {
+  grid-area: header;
+}
+
+main,
+.preview-body {
+  grid-area: content;
+}
+
+aside {
+  grid-area: side;
+}
+
+.preview-links {
+  grid-area: footer;
+}
+
+.editor {
+  min-height: 80vh;
+  width: 100%;
+}
+
+.label {
+  display: block;
+  color: #404040;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  border: 0;
+  margin-bottom: 10px;
+  outline: none;
+  background-color: inherit;
+  color: #404040
+}
+
+.editor-body .link {
+  background: #2B59C3;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 10px;
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 700;
+  width: 100%;
+  height: 36px;
+}
+
+.default,
+.pink,
+.dark,
+.purple,
+.yellow {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.pink,
+.pink .preview-links {
+  background-color: var(--secondary-pink);
+}
+
+.dark {
+  background-color: var(--secondary-dark);
+  color: #ffffff;
+}
+
+.purple {
+  background-color: var(--secondary-purple);
+}
+
+.yellow {
+  background-color: var(--secondary-yellow);
+}
+
+.pink > .header {
+  background-color: var(--primary-pink)
+}
+
+.dark > .header {
+  background-color: var(--primary-dark)
+}
+
+.purple > .header {
+  background-color: var(--primary-purple)
+}
+
+.yellow > .header {
+  background-color: var(--primary-yellow)
+}
+
+.preview {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";  
+  grid-template-columns: 1fr;
+  grid-template-rows: 56px 1fr 80px;
+  height: 100vh;
+}
+
+
+.preview-body {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.preview-body div,
+.preview-links div {
+  width: 800px;
+}
+
+.preview-links {
+  bottom: 0;
+  height: 80px;
+  padding-top: 20px;
+  z-index: 100;
+  background: inherit;
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px;
+  font-weight: 700;
+  background-color: var(--default-blue);
+  color: #ffffff;
+  height: 36px;
+}
+
+.pink .link {
+  background-color: var(--primary-pink);
+  color: white;
+}
+
+.dark .link {
+  background-color: var(--primary-dark)
+}
+
+.purple .link {
+  background-color: var(--primary-purple)
+}
+
+.yellow .link {
+  background-color: var(--primary-yellow)
+}
+
+
+.undecorated-link {
+  margin-left: 10px;
+  background-color: transparent;
+  color: var(--default-blue)
+}
+
+.pink .undecorated-link {
+  background-color: transparent;
+  color: var(--primary-pink)
+}
+
+.dark .undecorated-link {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.purple .undecorated-link {
+  color: var(--primary-purple);
+  background-color: transparent;
+}
+
+.yellow .undecorated-link {
+  color: var(--primary-yellow);
+  background-color: transparent;
+}
+
+.preview-title {
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.preview-date {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.preview-text {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.Dropdown-option {
+  position: relative;
+  text-transform: capitalize;
+}
+
+.Dropdown-option::after {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 13px;
+  top: 11px;
+  right: 10px;
+  background-color: #f1f1f1;
+}
+
+.Dropdown-control {
+  text-transform: capitalize;
+}
+
+.Dropdown-option:nth-of-type(2)::after {
+  background-color: var(--primary-dark);
+}
+
+.Dropdown-option:nth-of-type(3)::after  {
+  background-color: var(--primary-pink);
+}
+
+.Dropdown-option:nth-of-type(4)::after {
+  background-color: var(--primary-purple);
+}
+
+.Dropdown-option:nth-of-type(5)::after {
+  background-color: var(--primary-yellow);
+}
+
+
+@media (max-width: 768px) {
+  .editor-body {
+    grid-template-areas:
+      "header"
+      "side"
+      "content";
+
+
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      56px
+      100px
+      1fr 
+      }
+
+  .side-menu {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .side-menu h3 {
+    display: none;
+  }
+
+  .react-datepicker__input-container > input,
+  .Dropdown-control{
+    margin-right: 20px;
+    width: 150px;
+  }
+
+  .editor-body .link {
+    max-width: 100px;
+  }
+
+  .header {
+    padding-left: 20px;
+  }
+}
