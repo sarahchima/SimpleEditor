@@ -28,8 +28,8 @@ function Preview(props) {
             </div>
             <div className="preview-links">
                 <div>
-                    <Link to="/" className="link">Back to Editor</Link>
-                    <Link to="/" className="link undecorated-link">View on Github</Link>
+                    <Link to="/SimpleEditor" className="link">Back to Editor</Link>
+                    <Link to="https://github.com/sarahchima/SimpleEditor" className="link undecorated-link">View on Github</Link>
                 </div>
             </div>
         </div>
