@@ -1,14 +1,12 @@
-import React , {useEffect}from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 
-import htmlToDraft from 'html-to-draftjs';
 import  Header from './Header';
 
 
 function Preview(props) {
     const { state } = props.location;
    
-    useEffect(() => console.log(state))
     const date = state.date.toLocaleDateString()
     const { text, theme, title } = state;
 
@@ -29,7 +27,7 @@ function Preview(props) {
             <div className="preview-links">
                 <div>
                     <Link to="/SimpleEditor" className="link">Back to Editor</Link>
-                    <a src="https://github.com/sarahchima/SimpleEditor" className="link undecorated-link">View on Github</a>
+                    <a href="https://github.com/sarahchima/SimpleEditor" className="link undecorated-link">View on Github</a>
                 </div>
             </div>
         </div>
