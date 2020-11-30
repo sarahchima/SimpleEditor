@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SimpleEditor/static/css/main.2c6bc447.chunk.css",
-    "main.js": "/SimpleEditor/static/js/main.ae29a57f.chunk.js",
-    "main.js.map": "/SimpleEditor/static/js/main.ae29a57f.chunk.js.map",
+    "main.js": "/SimpleEditor/static/js/main.9f8f7289.chunk.js",
+    "main.js.map": "/SimpleEditor/static/js/main.9f8f7289.chunk.js.map",
     "runtime-main.js": "/SimpleEditor/static/js/runtime-main.68ff1e5e.js",
     "runtime-main.js.map": "/SimpleEditor/static/js/runtime-main.68ff1e5e.js.map",
     "static/css/2.d1bf3097.chunk.css": "/SimpleEditor/static/css/2.d1bf3097.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.d1bf3097.chunk.css",
     "static/js/2.1af9e557.chunk.js",
     "static/css/main.2c6bc447.chunk.css",
-    "static/js/main.ae29a57f.chunk.js"
+    "static/js/main.9f8f7289.chunk.js"
   ]
 }
