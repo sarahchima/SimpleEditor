@@ -2,6 +2,7 @@ import React , {useEffect}from 'react';
 import { Link } from "react-router-dom";
 
 import htmlToDraft from 'html-to-draftjs';
+import  Header from './Header';
 
 
 function Preview(props) {
@@ -13,11 +14,7 @@ function Preview(props) {
 
     return (
         <div className={`preview ${theme}`}>
-            <header className="header">
-                <nav className="header-nav">
-                    <Link to="/" className="header-title">Chaeban Editor</Link>
-                </nav>
-            </header>
+            <Header />
             <div className="preview-body">
                 <div>
                     <h1 className="preview-title">{title !== "" ? title : `Untitled`}</h1>

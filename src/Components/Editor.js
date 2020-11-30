@@ -1,7 +1,7 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState }from 'react';
 import { Link } from "react-router-dom";
-import DatePicker from "react-datepicker";
-import Dropdown from 'react-dropdown';
+import Header from './Header';
+import SideMenu from './SideMenu';
 import { Editor, EditorState, convertToRaw } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
 import 'draft-js/dist/Draft.css';
@@ -17,27 +17,11 @@ function EditorView() {
       );
     const [title, setTitle] = useState('');
 
-
-    const options = [
-        'default',
-        'dark',
-        'pink', 
-        'purple', 
-        'yellow'
-      ];
-    // alert(JSON.stringify(convertToRaw( editorState.getCurrentContent())))
-    useEffect(() => console.log(editorState.getCurrentContent().getPlainText()))
-
     return (
         <div>
-
             <div >
                 <div className="editor-body">
-                    <header className="header">
-                        <nav className="header-nav">
-                            <Link to="/" className="header-title">Chaeban Editor</Link>
-                        </nav>
-                    </header>
+                    <Header />
                     <main>
                         <div className="editor-container">
                             <input className="title" value={title} onChange={e => setTitle(e.target.value)} placeholder="Add a Title"/>
@@ -52,17 +36,12 @@ function EditorView() {
                     </main>
 
                     <aside className="side-menu">
-                        <h3>Settings </h3>
-                        <div className="date-container">
-                            <label className="label">Date</label>
-                            <DatePicker selected={date} onChange={date => setDate(date)} />
-                        </div>
-
-                        <div>
-                            <label className="label">Theme</label>
-                            <Dropdown options={options}  value={theme} onChange={theme => setTheme(theme.value)} placeholder="Select a theme" />
-                        </div>
-
+                       <SideMenu
+                            date={date}
+                            theme={theme}
+                            setDate={setDate}
+                            setTheme={setTheme}
+                       />
                     
                         <Link className="link" to={{
                             pathname: '/preview',
